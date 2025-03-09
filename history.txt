@@ -1,0 +1,115 @@
+azahask@c623lrd90445656:~/learnbay$ git clone https://github.com/AzaharSK/learnbay-assignment.git
+Cloning into 'learnbay-assignment'...
+warning: You appear to have cloned an empty repository.
+azahask@c623lrd90445656:~/learnbay$ ls
+learnbay-assignment
+azahask@c623lrd90445656:~/learnbay$ cd learnbay-assignment/
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ 
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ vim student.txt 
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ vim employee.txt 
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ cat student.txt 
+Students list
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ cat employee.txt 
+Employees list
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	employee.txt
+	student.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git add .
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ vim dept.txt
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   employee.txt
+	new file:   student.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dept.txt
+
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git add dept.txt 
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   dept.txt
+	new file:   employee.txt
+	new file:   student.txt
+
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git restore employee.txt 
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   dept.txt
+	new file:   employee.txt
+	new file:   student.txt
+
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ cat employee.txt 
+Employees list
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ vim student.txt 
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   dept.txt
+	new file:   employee.txt
+	new file:   student.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   student.txt
+
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git add student.txt 
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git commit -m "added student employe dept"
+[main (root-commit) 412fcda] added student employe dept
+ 3 files changed, 3 insertions(+)
+ create mode 100644 dept.txt
+ create mode 100644 employee.txt
+ create mode 100644 student.txt
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git push 
+Username for 'https://github.com': azaharsk
+Password for 'https://azaharsk@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 360 bytes | 360.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AzaharSK/learnbay-assignment.git
+ * [new branch]      main -> main
+azahask@c623lrd90445656:~/learnbay/learnbay-assignment$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 926 bytes | 926.00 KiB/s, done.
+From https://github.com/AzaharSK/learnbay-assignment
+   412fcda..2399e6e  main       -> origin/main
+Updating 412fcda..2399e6e
+Fast-forward
+ hello.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
